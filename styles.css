@@ -21,7 +21,8 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
 }
 
 a {
@@ -48,9 +49,9 @@ img {
 }
 
 .brand {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -88,7 +89,6 @@ img {
   text-align: center;
 }
 
-.kicker,
 .section-label,
 .work-gallery p,
 .strength-list span,
@@ -96,9 +96,17 @@ img {
   margin: 0;
   color: var(--accent);
   font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.kicker {
+  margin: 0;
+  color: #1d1a17;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 h1,
@@ -110,22 +118,22 @@ p {
 
 h1,
 h2 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 600;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
 h1 {
   max-width: 980px;
   margin: 22px auto;
-  font-size: clamp(4.8rem, 10vw, 10.5rem);
-  line-height: 0.9;
+  font-size: clamp(4.4rem, 9.4vw, 9.6rem);
+  line-height: 0.92;
 }
 
 h2 {
   margin-bottom: 0;
-  font-size: clamp(3rem, 6.8vw, 7.4rem);
-  line-height: 0.94;
+  font-size: clamp(2.8rem, 6vw, 6.6rem);
+  line-height: 0.98;
 }
 
 h3 {
@@ -137,8 +145,9 @@ h3 {
 .hero-copy {
   max-width: 620px;
   margin: 0 auto;
-  color: var(--muted);
+  color: #28231f;
   font-size: clamp(1rem, 1.5vw, 1.22rem);
+  font-weight: 500;
   line-height: 1.7;
 }
 
@@ -230,9 +239,9 @@ h3 {
 }
 
 .work-gallery h3 {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 3.4vw, 3.4rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 0.96;
 }
 
@@ -360,7 +369,8 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(4.2rem, 20vw, 6rem);
+    font-size: clamp(3.45rem, 16vw, 4.65rem);
+    line-height: 0.96;
   }
 
   .feature-image img {
