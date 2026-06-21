@@ -1,11 +1,22 @@
 # AresWei.com MVP
 
-This folder contains the first one-page website draft for `areswei.com`.
+This folder contains the one-page personal brand website draft for `areswei.com`.
 
 ## Files
 
 - `index.html` - the website content and page structure
 - `styles.css` - the visual design and responsive layout
+
+## Current Section Structure
+
+1. Hero
+2. Focus strip
+3. About
+4. Clifton Strengths
+5. Selected Work
+6. Timeline
+7. Principles
+8. Contact
 
 ## Quick Publishing Options
 
@@ -21,5 +32,5 @@ For most users, Netlify is the fastest path:
 ## Items To Personalize Later
 
 - Replace `hello@areswei.com` with the real email address you want visitors to use.
-- Replace the generic accomplishment sections with specific wins, projects, companies, roles, metrics, or links.
+- Replace bracketed placeholder text with your real story, accomplishments, projects, links, and goals.
 - Add a real portrait, project screenshots, or logo when ready.
