@@ -92,7 +92,6 @@ img {
 
 .section-label,
 .work-gallery p,
-.strength-list span,
 .timeline time {
   margin: 0;
   color: var(--accent);
@@ -194,41 +193,27 @@ h3 {
 
 .strength-list {
   display: grid;
+  max-width: 980px;
   margin-top: clamp(36px, 6vw, 64px);
 }
 
 .strength-list article {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(220px, 0.72fr) minmax(320px, 1fr);
-  gap: clamp(20px, 4vw, 56px);
-  align-items: start;
-  padding: 28px 0;
+  padding: 26px 0;
 }
 
 .strength-list article::after {
   position: absolute;
-  left: clamp(140px, 13vw, 190px);
+  left: 0;
   bottom: 0;
-  width: min(420px, 54%);
+  width: min(420px, 52%);
   height: 1px;
   content: "";
   background: var(--line);
 }
 
-.strength-list span {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.strength-name h3 {
-  margin-bottom: 0;
-}
-
-.strength-meaning {
-  max-width: 560px;
+.strength-list h3 {
   margin: 0;
-  font-size: clamp(1rem, 1.35vw, 1.2rem);
 }
 
 .strength-list p,
@@ -393,17 +378,11 @@ h3 {
   }
 
   .strength-list article {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    padding: 22px 0;
   }
 
   .strength-list article::after {
-    left: 0;
     width: min(240px, 72%);
-  }
-
-  .strength-list span {
-    margin-bottom: 8px;
   }
 
   .site-footer {
