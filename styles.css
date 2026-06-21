@@ -124,21 +124,21 @@ h2 {
 }
 
 h1 {
-  max-width: 980px;
+  max-width: 860px;
   margin: 22px auto;
-  font-size: clamp(4.4rem, 9.4vw, 9.6rem);
-  line-height: 0.92;
+  font-size: clamp(3.7rem, 7.6vw, 7.7rem);
+  line-height: 0.96;
 }
 
 h2 {
   margin-bottom: 0;
-  font-size: clamp(2.8rem, 6vw, 6.6rem);
-  line-height: 0.98;
+  font-size: clamp(2.2rem, 4.6vw, 4.9rem);
+  line-height: 1.02;
 }
 
 h3 {
   margin-bottom: 10px;
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
   font-weight: 600;
 }
 
@@ -146,9 +146,9 @@ h3 {
   max-width: 620px;
   margin: 0 auto;
   color: #28231f;
-  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  font-size: clamp(0.98rem, 1.3vw, 1.08rem);
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 .feature-image {
@@ -177,8 +177,8 @@ h3 {
   gap: 22px;
   align-content: end;
   color: var(--muted);
-  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
-  line-height: 1.72;
+  font-size: clamp(0.98rem, 1.25vw, 1.1rem);
+  line-height: 1.58;
 }
 
 .section-heading {
@@ -201,7 +201,7 @@ h3 {
 
 .strength-list article {
   min-height: 300px;
-  padding: 28px 24px;
+  padding: 24px 22px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.22);
@@ -209,14 +209,14 @@ h3 {
 
 .strength-list span {
   display: block;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .strength-list p,
 .timeline p,
 .contact p {
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .work-gallery {
@@ -240,9 +240,9 @@ h3 {
 
 .work-gallery h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  font-size: clamp(1.65rem, 2.4vw, 2.45rem);
   font-weight: 700;
-  line-height: 0.96;
+  line-height: 1;
 }
 
 .timeline-list {
@@ -369,8 +369,8 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(3.45rem, 16vw, 4.65rem);
-    line-height: 0.96;
+    font-size: clamp(2.95rem, 13.4vw, 3.95rem);
+    line-height: 1;
   }
 
   .feature-image img {
