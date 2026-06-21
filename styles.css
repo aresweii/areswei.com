@@ -79,6 +79,7 @@ img {
 .section-shell {
   width: min(1324px, calc(100% - 48px));
   margin: 0 auto;
+  scroll-margin-top: 120px;
 }
 
 .hero {
@@ -193,23 +194,21 @@ h3 {
 
 .strength-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  margin-top: clamp(36px, 6vw, 64px);
   border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-  margin-top: clamp(44px, 7vw, 78px);
 }
 
 .strength-list article {
-  min-height: 300px;
-  padding: 24px 22px;
-  border-right: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 56px);
+  align-items: start;
+  padding: 26px 0;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.22);
 }
 
 .strength-list span {
   display: block;
-  margin-bottom: 50px;
 }
 
 .strength-list p,
@@ -336,10 +335,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .strength-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .work-gallery {
     grid-template-columns: 1fr;
   }
@@ -377,16 +372,13 @@ h3 {
     aspect-ratio: 4 / 3;
   }
 
-  .strength-list {
-    grid-template-columns: 1fr;
-  }
-
   .strength-list article {
-    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .strength-list span {
-    margin-bottom: 42px;
+    margin-bottom: 0;
   }
 
   .site-footer {
