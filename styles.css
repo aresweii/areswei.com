@@ -95,7 +95,6 @@ h2 { font-size: clamp(38px, 4.2vw, 62px); line-height: 1.02; font-weight: 500; }
 .timeline-item { display: grid; grid-template-columns: 120px 64px 1fr; min-height: 180px; }
 .timeline-year { padding-top: 4px; display: flex; flex-direction: column; gap: 10px; }
 .timeline-year strong { color: var(--soft); font: 500 19px/1 var(--sans); letter-spacing: -.02em; }
-.timeline-year span { max-width: 90px; color: var(--muted); font: 500 9px/1.45 var(--sans); letter-spacing: .12em; text-transform: uppercase; }
 .timeline-marker { position: relative; display: flex; justify-content: center; }
 .timeline-marker::before { content: ""; position: absolute; top: 44px; bottom: -1px; width: 1px; background: linear-gradient(var(--accent), var(--line) 22%, var(--line)); opacity: .65; }
 .timeline-item:last-child .timeline-marker::before { display: none; }
@@ -212,7 +211,6 @@ h2 { font-size: clamp(38px, 4.2vw, 62px); line-height: 1.02; font-weight: 500; }
   .education-card > span { grid-column: 2; padding: 12px 0 0; border-left: 0; border-top: 1px solid var(--line); white-space: normal; }
   .timeline-item { grid-template-columns: 48px 42px 1fr; min-height: 190px; }
   .timeline-year strong { font-size: 14px; }
-  .timeline-year span { display: none; }
   .timeline-marker > span { width: 34px; height: 34px; }
   .timeline-marker svg { width: 17px; height: 17px; }
   .timeline-marker::before { top: 36px; }

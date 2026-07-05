@@ -69,7 +69,7 @@ function experienceTemplate() {
         <div class="timeline">
           ${data.timeline.map(item => `
             <article class="timeline-item ${item.current ? "is-current" : ""} ${item.ongoing ? "is-ongoing" : ""}">
-              <div class="timeline-year"><strong>${item.year}</strong><span>${item.theme}</span></div>
+              <div class="timeline-year"><strong>${item.year}</strong></div>
               <div class="timeline-marker"><span>${timelineIcons[item.icon]}</span></div>
               <div class="timeline-content">
                 <div class="timeline-content__head">
