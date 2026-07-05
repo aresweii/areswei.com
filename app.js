@@ -8,6 +8,16 @@ const icons = {
   mail: `<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4" width="15" height="12" rx="2"/><path d="m3.5 6 6.5 5 6.5-5"/></svg>`,
 };
 
+const timelineIcons = {
+  bookCoffee: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5c3-1.4 6-1.2 9 .7v12c-3-1.9-6-2.1-9-.7zM12 7.2c2.7-1.7 5.4-2 8.1-1v8.1M16.4 14.4h4.1v1.8a2.6 2.6 0 0 1-2.6 2.6h-3.7a2.6 2.6 0 0 1-2.2-1.2"/></svg>`,
+  cap: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2.5 9 9.5-5 9.5 5-9.5 5zM6 11.2v5.1c3.7 2.4 8.3 2.4 12 0v-5.1M21.5 9v6"/></svg>`,
+  community: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.3" r="3"/><circle cx="5.2" cy="10.2" r="2.2"/><circle cx="18.8" cy="10.2" r="2.2"/><path d="M6.8 20v-2.2a5.2 5.2 0 0 1 10.4 0V20M1.8 19v-1.4a3.5 3.5 0 0 1 3.5-3.5M22.2 19v-1.4a3.5 3.5 0 0 0-3.5-3.5"/></svg>`,
+  compass: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>`,
+  chart: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 16l4-4 3 2 6-7 2 2"/><path d="M17 7h3v3"/></svg>`,
+  briefcase: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7M3 12.5c5.8 2.7 12.2 2.7 18 0M10 13.5h4"/></svg>`,
+  network: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2.3"/><circle cx="5" cy="17.5" r="2.3"/><circle cx="19" cy="17.5" r="2.3"/><path d="m10.9 6.5-4.8 8.9M13.1 6.5l4.8 8.9M7.3 17.5h9.4"/></svg>`,
+};
+
 function experienceTemplate() {
   return `
     <article class="page page--experience">
@@ -47,12 +57,38 @@ function experienceTemplate() {
           <div><p class="overline">2020 — 2026</p><h2>A timeline of<br><em>becoming.</em></h2></div>
           <p>Experience is more than a list of roles. This is the thread connecting what I learned, how I grew and where I am heading.</p>
         </div>
+        <article class="education-card">
+          <div class="education-card__icon">${timelineIcons.cap}</div>
+          <div>
+            <p class="overline">Education · ${data.education.period}</p>
+            <h3>${data.education.school}</h3>
+            <p>${data.education.degree} · <strong>${data.education.focus}</strong></p>
+          </div>
+          <span>${data.education.honors}</span>
+        </article>
         <div class="timeline">
-          ${data.timeline.map((item, index) => `
-            <article class="timeline-item ${index === 0 ? "is-current" : ""}">
-              <div class="timeline-year">${item.year}</div>
-              <div class="timeline-marker"><span></span></div>
-              <div class="timeline-content"><p>${item.type}</p><h3>${item.title}</h3><span>${item.detail}</span></div>
+          ${data.timeline.map(item => `
+            <article class="timeline-item ${item.current ? "is-current" : ""} ${item.ongoing ? "is-ongoing" : ""}">
+              <div class="timeline-year"><strong>${item.year}</strong><span>${item.theme}</span></div>
+              <div class="timeline-marker"><span>${timelineIcons[item.icon]}</span></div>
+              <div class="timeline-content">
+                <div class="timeline-content__head">
+                  <p class="overline">${item.theme}</p>
+                  ${item.current ? `<span class="current-label"><i></i>Current</span>` : ""}
+                </div>
+                <div class="timeline-entries">
+                  ${item.entries.map(entry => `
+                    <article class="timeline-entry">
+                      <div class="timeline-entry__title">
+                        <h3>${entry.role}</h3>
+                        <p>${entry.organization}${entry.location ? ` · ${entry.location}` : ""}</p>
+                      </div>
+                      <p class="timeline-entry__impact">${entry.impact}</p>
+                    </article>`).join("")}
+                </div>
+                ${item.milestone ? `<div class="timeline-milestone"><span>◆</span><div><small>Credential milestone</small><strong>${item.milestone}</strong></div></div>` : ""}
+                ${item.ongoing ? `<div class="ongoing-link"><span></span>Ongoing at U.S. Bank</div>` : ""}
+              </div>
             </article>`).join("")}
         </div>
       </section>
