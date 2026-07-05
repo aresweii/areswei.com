@@ -100,14 +100,14 @@ window.PORTFOLIO_DATA = {
   timeline: [
     {
       year: "2020",
-      theme: "Exploration",
+      theme: "Resourceful Curiosity",
       icon: "bookCoffee",
       entries: [
         {
           role: "Barista",
           organization: "Sisyphe Bookstore",
           location: "Zhengzhou, China",
-          impact: "Built customer-service discipline and team adaptability through three months of fast-paced, customer-facing work during a formative gap year.",
+          impact: "Pursued an interest in coffee through hands-on barista work, gaining practical craft and customer-service experience without the upfront cost of owning professional equipment before moving to the U.S.",
         },
         {
           role: "K–12 English Instructor",
@@ -119,11 +119,11 @@ window.PORTFOLIO_DATA = {
     },
     {
       year: "2021",
-      theme: "Foundation",
+      theme: "Academic Foundation",
       icon: "cap",
       entries: [
         {
-          role: "Finance & MIS Student",
+          role: "Finance & Management Information Systems",
           organization: "Carlson School of Management",
           impact: "Began interdisciplinary training in finance and information systems, building a foundation in analytical thinking, business strategy, and technology-enabled problem-solving.",
         },
@@ -131,7 +131,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       year: "2022",
-      theme: "Community",
+      theme: "International Community Building",
       icon: "community",
       entries: [
         {
@@ -143,7 +143,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       year: "2023",
-      theme: "Leadership & Research",
+      theme: "Leadership & Professional Exploration",
       icon: "compass",
       entries: [
         {
@@ -204,9 +204,9 @@ window.PORTFOLIO_DATA = {
           impact: "Built an AI-enabled prototype for SOP review, requirements analysis, evidence auditing, and release-readiness assessment, exploring how automation can improve validation quality and efficiency.",
         },
         {
-          role: "Vibe Coding",
+          role: "AI-Assisted Product Development",
           organization: "Independent Learning",
-          impact: "Began using AI-assisted development to rapidly turn ideas into functional digital products, expanding from business analysis into hands-on prototyping and product building.",
+          impact: "Used AI-assisted development to turn ideas into functional digital products, expanding from business analysis into rapid prototyping and hands-on product building.",
         },
       ],
     },
