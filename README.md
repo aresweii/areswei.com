@@ -1,36 +1,41 @@
-# AresWei.com MVP
+# Ares Wei — Personal Portfolio
 
-This folder contains the one-page personal brand website draft for `areswei.com`.
+A clean, dark personal website for experience, competencies, work samples, hobbies and contact details. It is intentionally build-free: open `index.html` or serve the folder with any static web server.
 
-## Files
+## Edit your content
 
-- `index.html` - the website content and page structure
-- `styles.css` - the visual design and responsive layout
+All personal copy is centralized in `data.js`:
 
-## Current Section Structure
+- personal statement and availability
+- skills and proficiencies
+- 2020–2026 timeline
+- work style and strengths
+- portfolio projects
+- hobbies
+- email, LinkedIn, GitHub and location
 
-1. Hero
-2. Focus strip
-3. About
-4. Clifton Strengths
-5. Selected Work
-6. Timeline
-7. Principles
-8. Contact
+The current timeline, project cards and contact details are polished draft placeholders. Replace them with verified personal information before publishing.
 
-## Quick Publishing Options
+## Add a real portrait
 
-The simplest hosting options for this static MVP are Netlify, Vercel, GitHub Pages, or GoDaddy's own website hosting.
+Replace the `.portrait` initials block in `app.js` with an image:
 
-For most users, Netlify is the fastest path:
+```html
+<img class="portrait" src="assets/ares-wei.jpg" alt="Ares Wei" />
+```
 
-1. Create a Netlify account.
-2. Drag the `index.html` and `styles.css` files into a new Netlify site.
-3. In Netlify, add the custom domain `areswei.com`.
-4. In GoDaddy, update the DNS records to point to Netlify.
+Keep the image close to a 4:5 portrait ratio and at least 1200 px tall.
 
-## Items To Personalize Later
+## Run locally
 
-- Replace `hello@areswei.com` with the real email address you want visitors to use.
-- Replace bracketed placeholder text with your real story, accomplishments, projects, links, and goals.
-- Add a real portrait, project screenshots, or logo when ready.
+```bash
+python3 -m http.server 4173
+```
+
+Then visit `http://localhost:4173`.
+
+## Deploy
+
+The site can be deployed directly to GitHub Pages, Vercel or Netlify without a build command.
+
+The repository includes a `CNAME` file for the production domain `areswei.com` and a `.nojekyll` marker for GitHub Pages.

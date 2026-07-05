@@ -1,172 +1,71 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ares Wei is a builder, strategist, and learner exploring business, AI systems, and useful products."
+      content="Ares Wei — finance, AI, analytics and technology portfolio."
     />
-    <title>Ares Wei | Builder, Strategist, Learner</title>
+    <meta name="theme-color" content="#0b1110" />
+    <link rel="canonical" href="https://areswei.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://areswei.com/" />
+    <meta property="og:title" content="Ares Wei — Experience & Portfolio" />
+    <meta
+      property="og:description"
+      content="Finance, AI, analytics and technology — experience, competencies and selected work by Ares Wei."
+    />
+    <title>Ares Wei — Experience & Portfolio</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="noise" aria-hidden="true"></div>
+
     <header class="site-header">
-      <nav class="nav-left" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#strengths">Strengths</a>
+      <a class="identity" href="#experience" aria-label="Ares Wei home">
+        <span class="identity__en">Ares Wei</span>
+        <span class="identity__cn">魏星宇</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#experience" data-route-link="experience">Experience</a>
+        <a href="#projects" data-route-link="projects">Projects</a>
+        <a href="#hobbies" data-route-link="hobbies">Hobbies</a>
+        <a href="#contact" data-route-link="contact">Contact</a>
       </nav>
-      <a class="brand" href="#top" aria-label="Ares Wei home">Ares Wei</a>
-      <nav class="nav-right" aria-label="Secondary navigation">
-        <a href="#about">About</a>
-        <a class="contact-link" href="#contact">Contact</a>
-      </nav>
+
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </header>
 
-    <main id="top">
-      <section class="hero section-shell">
-        <p class="kicker">From Idea To Momentum</p>
-        <h1>Builder. Strategist. Learner.</h1>
-        <p class="hero-copy">
-          Projects, strengths, and next moves. Clear now, sharper over time.
-        </p>
-      </section>
+    <div class="mobile-nav" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="#experience" data-route-link="experience">Experience</a>
+        <a href="#projects" data-route-link="projects">Projects</a>
+        <a href="#hobbies" data-route-link="hobbies">Hobbies</a>
+        <a href="#contact" data-route-link="contact">Contact</a>
+      </nav>
+      <p>Finance · AI · Analytics · Technology</p>
+    </div>
 
-      <section class="feature-image section-shell" aria-label="Featured visual">
-        <img
-          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=100"
-          alt="Bright modern workspace with clean architectural lines"
-        />
-      </section>
-
-      <section class="intro section-shell" id="about">
-        <div>
-          <p class="section-label">About</p>
-          <h2>A clear portfolio for work in progress.</h2>
-        </div>
-        <div class="intro-copy">
-          <p>
-            [Add your short story: background, focus, and what you want to build.]
-          </p>
-          <p>
-            Replace placeholders with real projects, links, and proof points.
-          </p>
-        </div>
-      </section>
-
-      <section class="strengths section-shell" id="strengths">
-        <div class="section-heading">
-          <p class="section-label">Clifton Strengths</p>
-          <h2>How I think and build.</h2>
-        </div>
-
-        <div class="strength-list vertical-list">
-          <article>
-            <h3>Connectedness</h3>
-          </article>
-          <article>
-            <h3>Individualization</h3>
-          </article>
-          <article>
-            <h3>Strategic</h3>
-          </article>
-          <article>
-            <h3>Maximizer</h3>
-          </article>
-          <article>
-            <h3>Learner</h3>
-          </article>
-        </div>
-      </section>
-
-      <section class="work section-shell" id="work">
-        <div class="section-heading">
-          <p class="section-label">Selected Work</p>
-          <h2>Projects to fill in next.</h2>
-        </div>
-
-        <div class="work-gallery">
-          <article>
-            <img
-              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=100"
-              alt="Minimal office table and chairs"
-            />
-            <div>
-              <p>Project 01</p>
-              <h3>[Add your strongest project]</h3>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=100"
-              alt="Sharp architectural detail"
-            />
-            <div>
-              <p>Project 02</p>
-              <h3>[Add a business accomplishment]</h3>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=100"
-              alt="Team working in a clean office environment"
-            />
-            <div>
-              <p>Project 03</p>
-              <h3>[Add an AI or technology workflow]</h3>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="timeline section-shell">
-        <div class="section-heading">
-          <p class="section-label">Timeline</p>
-          <h2>The path so far.</h2>
-        </div>
-
-        <div class="timeline-list">
-          <article>
-            <time>Now</time>
-            <h3>[What you are focused on right now]</h3>
-            <p>Add current goals, studies, or projects.</p>
-          </article>
-          <article>
-            <time>Recent</time>
-            <h3>[Recent project or accomplishment]</h3>
-            <p>Add one meaningful proof point.</p>
-          </article>
-          <article>
-            <time>Next</time>
-            <h3>[What you want to build next]</h3>
-            <p>Add the opportunity or direction you want.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="principles section-shell">
-        <div>
-          <p class="section-label">Principles</p>
-          <h2>Clear thinking. Useful work.</h2>
-        </div>
-        <div class="principle-list">
-          <p>Build with clarity.</p>
-          <p>Learn fast.</p>
-          <p>Make ideas useful.</p>
-        </div>
-      </section>
-
-      <section class="contact section-shell" id="contact">
-        <p class="section-label">Contact</p>
-        <h2>Let's build.</h2>
-        <p>[Add email, LinkedIn, GitHub, or booking link.]</p>
-        <a class="button" href="mailto:hello@areswei.com">hello@areswei.com</a>
-      </section>
-    </main>
+    <main id="main" tabindex="-1"></main>
 
     <footer class="site-footer">
-      <p>Copyright 2026 Ares Wei</p>
-      <a href="#top">Back to top</a>
+      <p>© <span id="year"></span> Ares Wei</p>
+      <p>Built with curiosity &amp; intention.</p>
     </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
