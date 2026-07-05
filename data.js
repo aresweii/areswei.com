@@ -89,14 +89,127 @@ window.PORTFOLIO_DATA = {
     },
   ],
 
+  education: {
+    school: "University of Minnesota — Carlson School of Management",
+    degree: "Bachelor of Science in Business",
+    focus: "Finance & Management Information Systems",
+    period: "2021 — 2025",
+    honors: "GPA 3.91 / 4.00 · Dean’s List",
+  },
+
   timeline: [
-    { year: "2026", title: "The next chapter", type: "Now", detail: "Building toward roles where finance, data and technology create measurable business value." },
-    { year: "2025", title: "Connecting the disciplines", type: "Growth", detail: "Deepened an interdisciplinary toolkit across financial thinking, analytics and emerging AI workflows." },
-    { year: "2024", title: "From analysis to influence", type: "Practice", detail: "Focused on turning detailed work into clear recommendations for different audiences." },
-    { year: "2023", title: "Systems & controls", type: "Experience", detail: "Developed a sharper view of requirements, validation, documentation and reliable processes." },
-    { year: "2022", title: "Evidence-driven work", type: "Experience", detail: "Used structured research and analysis to move from questions to defensible answers." },
-    { year: "2021", title: "Building the toolkit", type: "Foundation", detail: "Expanded hands-on fluency in financial analysis, data tools and business communication." },
-    { year: "2020", title: "A curious beginning", type: "Foundation", detail: "Started shaping a career around understanding complex systems and explaining them simply." },
+    {
+      year: "2020",
+      theme: "Exploration",
+      icon: "bookCoffee",
+      entries: [
+        {
+          role: "Barista",
+          organization: "Sisyphe Bookstore",
+          location: "Zhengzhou, China",
+          impact: "Built customer-service discipline and team adaptability through three months of fast-paced, customer-facing work during a formative gap year.",
+        },
+        {
+          role: "K–12 English Instructor",
+          organization: "Private Language Institute",
+          location: "Zhengzhou, China",
+          impact: "Strengthened students’ grammar, language intuition, pronunciation, and conversational confidence through individualized and interactive instruction.",
+        },
+      ],
+    },
+    {
+      year: "2021",
+      theme: "Foundation",
+      icon: "cap",
+      entries: [
+        {
+          role: "Finance & MIS Student",
+          organization: "Carlson School of Management",
+          impact: "Began interdisciplinary training in finance and information systems, building a foundation in analytical thinking, business strategy, and technology-enabled problem-solving.",
+        },
+      ],
+    },
+    {
+      year: "2022",
+      theme: "Community",
+      icon: "community",
+      entries: [
+        {
+          role: "Global Scholars Intern",
+          organization: "Carlson School of Management",
+          impact: "Planned and delivered 10+ community programs that strengthened connection, belonging, and cross-cultural inclusion among Carlson’s international students.",
+        },
+      ],
+    },
+    {
+      year: "2023",
+      theme: "Leadership & Research",
+      icon: "compass",
+      entries: [
+        {
+          role: "Summer Orientation Leader",
+          organization: "University of Minnesota",
+          impact: "Led daily groups of 25+ and guided nearly 700 incoming students through orientation while delivering academic insights and coordinating community-building activities.",
+        },
+        {
+          role: "Equity Research Analyst",
+          organization: "CFA Institute Research Challenge",
+          impact: "Co-authored a 20-page Polaris equity report and presented a valuation-backed HOLD thesis, earning second place among 14 universities in the Midwest Local Finals.",
+        },
+      ],
+    },
+    {
+      year: "2024",
+      theme: "Investing & Analysis",
+      icon: "chart",
+      entries: [
+        {
+          role: "Equity Research Analyst",
+          organization: "David S. Kidwell Funds",
+          impact: "Covered six healthcare equities for a $50M fund and originated two 100-basis-point positions that subsequently returned approximately 48% and 28%.",
+        },
+        {
+          role: "Financial Analyst Intern",
+          organization: "Beijing Equity Exchange Financial Service (CBEX)",
+          location: "Shanghai, China",
+          impact: "Produced due diligence on six state-owned enterprises, supported analysis of a $300M stake acquisition, and standardized workflows that reduced research turnaround time by 30%.",
+        },
+      ],
+      milestone: "Passed Securities Industry Essentials (SIE) Exam",
+    },
+    {
+      year: "2025",
+      theme: "Professional Transition",
+      icon: "briefcase",
+      ongoing: true,
+      entries: [
+        {
+          role: "Business Analyst",
+          organization: "U.S. Bank",
+          location: "Minneapolis, MN",
+          impact: "Translated cross-functional business needs into actionable requirements while executing 100+ validation tests, identifying 40+ defects, and supporting resolution across product, engineering, and QA.",
+        },
+      ],
+      milestone: "Passed CFA Level I Exam",
+    },
+    {
+      year: "2026",
+      theme: "Building Smarter Systems",
+      icon: "network",
+      current: true,
+      entries: [
+        {
+          role: "AI-Enabled Business Validation",
+          organization: "U.S. Bank · Current Focus",
+          impact: "Built an AI-enabled prototype for SOP review, requirements analysis, evidence auditing, and release-readiness assessment, exploring how automation can improve validation quality and efficiency.",
+        },
+        {
+          role: "Vibe Coding",
+          organization: "Independent Learning",
+          impact: "Began using AI-assisted development to rapidly turn ideas into functional digital products, expanding from business analysis into hands-on prototyping and product building.",
+        },
+      ],
+    },
   ],
 
   strengths: [
