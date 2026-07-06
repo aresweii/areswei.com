@@ -124,8 +124,10 @@ h2 { font-size: clamp(38px, 4.2vw, 62px); line-height: 1.02; font-weight: 500; }
 @keyframes timelinePulse { 0%,100% { box-shadow: 0 0 0 8px rgba(159,227,194,.04), 0 0 20px rgba(159,227,194,.05); } 50% { box-shadow: 0 0 0 12px rgba(159,227,194,.075), 0 0 34px rgba(159,227,194,.13); } }
 
 .strengths { padding: 120px 0; border-top: 1px solid var(--line); }
-.strength-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.strength-card { min-height: 270px; padding: 38px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .25s; }
+.strength-grid { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.strength-card { grid-column: span 2; min-height: 270px; padding: 38px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .25s; }
+.strength-card:nth-child(4),
+.strength-card:nth-child(5) { grid-column: span 3; }
 .strength-card:hover { background: var(--bg-raised); }
 .strength-card > span { color: var(--accent); font-size: 10px; letter-spacing: .14em; }
 .strength-card h3 { margin: 72px 0 16px; font: 500 23px/1.2 var(--sans); letter-spacing: -.03em; }
@@ -223,6 +225,9 @@ h2 { font-size: clamp(38px, 4.2vw, 62px); line-height: 1.02; font-weight: 500; }
   .current-label { display: none; }
   .ongoing-link { position: static; margin-top: 18px; }
   .strength-grid, .hobby-grid { grid-template-columns: 1fr; }
+  .strength-card,
+  .strength-card:nth-child(4),
+  .strength-card:nth-child(5) { grid-column: auto; }
   .strength-card { min-height: 250px; padding: 28px; }
   .contact-band { padding: 75px 0; gap: 20px; }
   .round-link { flex: 0 0 auto; width: 64px; height: 64px; }

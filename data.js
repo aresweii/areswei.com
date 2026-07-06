@@ -213,10 +213,11 @@ window.PORTFOLIO_DATA = {
   ],
 
   strengths: [
-    { number: "01", title: "Structured curiosity", text: "I ask precise questions, map ambiguity and look for the real constraint before solving." },
-    { number: "02", title: "Quiet ownership", text: "I take responsibility for the details, communicate early and leave work more usable than I found it." },
-    { number: "03", title: "Translator mindset", text: "I connect technical, financial and business perspectives so different people can move together." },
-    { number: "04", title: "Evidence over theatre", text: "I prefer a clear assumption, a tested model and an honest caveat to unnecessary complexity." },
+    { number: "01", title: "Strategic", text: "Seeing patterns and possibilities, finding a thoughtful way forward." },
+    { number: "02", title: "Connectedness", text: "Forming genuine bonds and finding common ground across different people and experiences." },
+    { number: "03", title: "Individualization", text: "Seeing each person as they are—their circumstances, strengths, and unique potential." },
+    { number: "04", title: "Maximizer", text: "Recognizing what is already strong and helping it grow into something exceptional." },
+    { number: "05", title: "Learner", text: "Staying curious, humble, and always open to becoming better." },
   ],
 
   projects: [
