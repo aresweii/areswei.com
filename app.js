@@ -6,7 +6,32 @@ const mobileNav = document.querySelector(".mobile-nav");
 const icons = {
   arrow: `<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 16 4M7 4h9v9"/></svg>`,
   mail: `<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4" width="15" height="12" rx="2"/><path d="m3.5 6 6.5 5 6.5-5"/></svg>`,
+  phone: `<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6.1 2.8 8.4 7 6.8 8.5c1 2.2 2.5 3.8 4.7 4.8l1.7-1.7 4 2.4-.7 3.1c-.2.7-.8 1.1-1.5 1A14.7 14.7 0 0 1 2 5.1c-.1-.7.4-1.4 1.1-1.5z"/></svg>`,
+  linkedin: `<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.4 8.2v7.6M5.4 4.2v.1M9.2 15.8V8.2M9.2 11.5c.5-2.2 5.4-3.2 5.4 1.3v3"/></svg>`,
+  location: `<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.2 8.3c0 4.5-6.2 9.1-6.2 9.1S3.8 12.8 3.8 8.3a6.2 6.2 0 1 1 12.4 0Z"/><circle cx="10" cy="8.3" r="2"/></svg>`,
 };
+
+function contactItemsTemplate() {
+  const items = [
+    { icon: icons.mail, label: "Email", value: data.contact.email, href: `mailto:${data.contact.email}` },
+    { icon: icons.phone, label: "Phone", value: data.contact.phone, href: `tel:+1${data.contact.phone.replace(/\D/g, "")}` },
+    { icon: icons.linkedin, label: "LinkedIn", value: data.contact.linkedinLabel, href: data.contact.linkedin, external: true },
+    { icon: icons.location, label: "Location", value: data.contact.location, note: data.contact.locationNote },
+  ];
+
+  return items.map(item => {
+    const inner = `
+      <span class="contact-item__icon">${item.icon}</span>
+      <span class="contact-item__label">${item.label}</span>
+      <strong>${item.value}</strong>
+      ${item.note ? `<em>${item.note}</em>` : ""}
+      ${item.href ? `<span class="contact-item__arrow">${icons.arrow}</span>` : ""}
+    `;
+    return item.href
+      ? `<a class="contact-item" href="${item.href}" ${item.external ? `target="_blank" rel="noreferrer"` : ""}>${inner}</a>`
+      : `<div class="contact-item">${inner}</div>`;
+  }).join("");
+}
 
 const timelineIcons = {
   bookCoffee: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5c3-1.4 6-1.2 9 .7v12c-3-1.9-6-2.1-9-.7zM12 7.2c2.7-1.7 5.4-2 8.1-1v8.1M16.4 14.4h4.1v1.8a2.6 2.6 0 0 1-2.6 2.6h-3.7a2.6 2.6 0 0 1-2.2-1.2"/></svg>`,
@@ -29,7 +54,7 @@ function experienceTemplate() {
             <h1>I make complexity<br><em>useful.</em></h1>
             <p class="hero__statement">${data.profile.statement}</p>
             <p class="draft-note">${data.profile.statementNote}</p>
-            <a class="text-link" href="#contact">Start a conversation ${icons.arrow}</a>
+            <a class="text-link" href="#experience-contact" data-home-contact-link>Start a conversation ${icons.arrow}</a>
           </div>
           <div class="portrait-wrap" aria-label="Portrait placeholder for Ares Wei">
             <div class="portrait">
@@ -103,7 +128,7 @@ function experienceTemplate() {
         </div>
       </section>
 
-      ${contactBandTemplate()}
+      ${homeContactTemplate()}
     </article>`;
 }
 
@@ -164,21 +189,37 @@ function contactTemplate() {
             <h1>Let’s make the next<br><em>idea real.</em></h1>
           </div>
           <div class="contact-hero__copy">
-            <p>I’m always glad to meet thoughtful people working on interesting questions — whether that means a role, a project or simply comparing notes.</p>
-            <p class="location"><i></i>${data.contact.location}</p>
+            <p>${data.contact.intro}</p>
+            <p class="location"><i></i>${data.contact.location} · ${data.contact.locationNote}</p>
           </div>
         </div>
       </section>
       <section class="contact-links section-shell reveal">
-        <a href="mailto:${data.contact.email}"><span>Email</span><strong>${data.contact.email}</strong>${icons.arrow}</a>
-        <a href="${data.contact.linkedin}" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Connect professionally</strong>${icons.arrow}</a>
-        <a href="${data.contact.github}" target="_blank" rel="noreferrer"><span>GitHub</span><strong>Explore the code</strong>${icons.arrow}</a>
+        ${contactItemsTemplate()}
       </section>
       <section class="contact-note section-shell reveal">
         <p class="overline">A small note</p>
-        <p>This demo uses placeholder contact details. Update the <code>contact</code> object in <code>data.js</code> before publishing.</p>
+        <p>${data.contact.availability}</p>
       </section>
     </article>`;
+}
+
+function homeContactTemplate() {
+  return `
+    <section class="home-contact section-shell reveal" id="experience-contact">
+      <div class="section-kicker"><span></span>Contact</div>
+      <div class="home-contact__header">
+        <div>
+          <p class="overline">Open to the right conversation</p>
+          <h2>Let’s build what’s<br><em>next.</em></h2>
+        </div>
+        <p>${data.contact.intro}</p>
+      </div>
+      <div class="contact-links contact-links--home">
+        ${contactItemsTemplate()}
+      </div>
+      <p class="home-contact__availability">${data.contact.availability}</p>
+    </section>`;
 }
 
 function contactBandTemplate(kicker = "Open to the right conversation", title = "Let’s build what’s next.") {
@@ -213,6 +254,12 @@ function bindPageEvents() {
     });
   });
   setSkill("finance");
+  document.querySelectorAll("[data-home-contact-link]").forEach(link => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      document.querySelector("#experience-contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
   window.requestAnimationFrame(() => document.querySelectorAll(".reveal").forEach((el, index) => setTimeout(() => el.classList.add("is-visible"), index * 70)));
 }
 

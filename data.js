@@ -263,9 +263,13 @@ window.PORTFOLIO_DATA = {
   ],
 
   contact: {
-    email: "your.email@example.com",
-    linkedin: "https://www.linkedin.com/in/your-profile",
-    github: "https://github.com/your-username",
-    location: "Chicago, IL · Open to opportunities",
+    intro: "Let’s connect if you’re building around finance, analytics, AI, or thoughtful systems.",
+    email: "Areswxy17@gmail.com",
+    phone: "612-203-6384",
+    linkedin: "https://www.linkedin.com/in/areswei",
+    linkedinLabel: "linkedin.com/in/areswei",
+    location: "Greater Twin Cities area",
+    locationNote: "Open to relocate within the U.S.",
+    availability: "Available for thoughtful conversations.",
   },
 };
